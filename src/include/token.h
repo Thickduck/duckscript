@@ -1,4 +1,4 @@
-#ifndef LOKEN_H
+#ifndef TOKEN_H
 #define TOKEN_H
 
 typedef struct TOKEN_STRUC {
@@ -14,3 +14,6 @@ typedef struct TOKEN_STRUC {
 } token_T;
 
 token_T* init_token(int type, char* value);
+
+
+#endif
