@@ -1,4 +1,5 @@
 #include "include/lexer.h"
+#include "include/token.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -34,14 +35,21 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 {
     while (lexer->c != '\0' && lexer->i < strlen(lexer->contents))
     {
-         if (lexer-> c == ' ' || lexer->c == 10)
+        if (lexer-> c == ' ' || lexer->c == 10){
             lexer_skip_whitespace(lexer);
+        }
 
         switch (lexer->c){
-            case
+            case '=': return lexer_advance_with_token(lexer, init_token(TOKEN_EQUALS, lexer_get_current_char_as_string(lexer))); break;
         }
     }
 }
+token_T* lexer_advance_with_token(lexer_T* lexer, token_T* token)
+{
+    lexer_advance(lexer);
+    return token;
+}
+
 
 token_T* lexer_collect_string(lexer_T* lexer)
 {
