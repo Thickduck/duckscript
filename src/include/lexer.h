@@ -22,7 +22,7 @@ token_T* lexer_collect_string(lexer_T* lexer);
 
 token_T* lexer_advance_with_token(lexer_T* lexer, token_T* token);
 
-token_T* lexer_collect_id(lexer_T* lexer, token_T* token);
+token_T* lexer_collect_id(lexer_T* lexer);
 
 char* lexer_get_current_char_as_string(lexer_T* lexer);
 
