@@ -78,7 +78,6 @@ token_T *lexer_advance_with_token(lexer_T *lexer, token_T *token)
 
 token_T *lexer_collect_string(lexer_T *lexer)
 {
-    lexer_advance(lexer);
 
     char *value = calloc(1, sizeof(char));
 
