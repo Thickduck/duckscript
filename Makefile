@@ -3,7 +3,7 @@ files = src/*.c
 flags = -g
 
 all:
-	gcc $(files) $(flags) -o $(exec)
+	gcc -Wall $(files) $(flags) -o $(exec)
 
 clean:
 	-rm *.sus
